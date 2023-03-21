@@ -4,6 +4,7 @@ import { GlobalStyles } from './styles/global';
 import Index from './views/Index';
 import Work from './views/Work';
 import { useLayoutEffect } from 'react';
+import ItemSocialLinks from './components/effects/ItemSocialLinks';
 
 const Wrapper = ({ children }) => {
   const location = useLocation();
@@ -27,6 +28,7 @@ function App() {
           <Routes>
             <Route path='/' element={<Index />} />
             <Route path='/:id' element={<Work />} />
+            <Route path='/prueba' element={<ItemSocialLinks />} />
           </Routes>
         </Wrapper>
       </main>

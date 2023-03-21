@@ -4,22 +4,21 @@ import Sidebar from '../../components/sidebar/Sidebar'
 import { Text } from '../../styles/global'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faAngleDoubleRight } from '@fortawesome/free-solid-svg-icons'
-
-import Effect from '../../components/effects/Effect'
+import ItemEffectWordChange from '../../components/effects/ItemEffectWordChange'
 
 const Header = () => {
     return (
         <Container className='container' id='home'>
-            <Effect/>
             <div className="container-lg">
                 <Sidebar section='home'/>
                 <div className='image'>
 
                 </div>
                 <div className="text">
+                    <ItemEffectWordChange/>
                     <h1>I'M MANUEL DIEZ DE OÑATE</h1>
                     <h2>FULL STACK DEVELOPER</h2>
-                    <p>Crafting digital solutions with passion, precision, and a desire to make a difference in the world</p>
+                    <p className='description'>Crafting digital solutions with passion, precision, and a desire to make a difference in the world</p>
                     <ButtonCinco className='boton'>
                         <div className="icono">
                             <FontAwesomeIcon icon={faAngleDoubleRight}/>
@@ -63,7 +62,7 @@ const Container = styled.section`
                 ${Text({ size: '3rem', color: props => props.theme.white, weight: '700' })}
             }
             
-            p{
+            .description{
                 ${Text({ size: '1rem', color: props => props.theme.gray, weight: '300' })}
                 width: 100%;
                 max-width: 500px;
@@ -84,7 +83,7 @@ const Container = styled.section`
                     ${Text({ size: '2.5rem', color: props => props.theme.white, weight: '700' })}
                 }
                 
-                p{
+                .description{
                     ${Text({ size: '1rem', color: props => props.theme.gray, weight: '300' })}
                 }
                 
@@ -125,7 +124,7 @@ const Container = styled.section`
                     ${Text({ size: '2rem', color: props => props.theme.white, weight: '700' })}
                 }
                 
-                p{
+                .description{
                     ${Text({ size: '1rem', color: props => props.theme.gray, weight: '300' })}
                 }
                 

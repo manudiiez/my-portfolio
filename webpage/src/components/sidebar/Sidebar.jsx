@@ -30,13 +30,6 @@ const Sidebar = ({ section }) => {
           )
         }
       </li>
-      {/* {
-        location.pathname === '/' && (
-          <li>
-            <a href="#projects" className={section === 'projects' ? 'active' : ''}><FontAwesomeIcon icon={faFolder} /></a>
-          </li>
-        )
-      } */}
       {
         location.pathname === '/' && (
           <li>
@@ -55,7 +48,7 @@ const Sidebar = ({ section }) => {
         <a href="#contact" className={section === 'contact' ? 'active' : ''}><FontAwesomeIcon icon={faComment} /></a>
       </li>
       <li>
-        <button>CV</button>
+        <button><span>CV</span></button>
       </li>
     </Container>
   )
@@ -85,12 +78,46 @@ const Container = styled.ul`
       height: 40px;
       width: 40px;
       transition: all ease-in-out .3s;
+      overflow: hidden;
+      position: relative;
       
       &:hover{
-        background-color: ${props => props.theme.yellow};
+        svg{
+          color: ${props => props.theme.dark};
+          transform: rotateY(360deg);
+        }  
+        span{
+          color: ${props => props.theme.dark};
+        } 
+        &::before{
+          top: 0;
+        }     
       }
       &.active{
         background-color: ${props => props.theme.yellow};
+      }
+      
+      &::before{
+        content: "";
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: ${props => props.theme.white};
+        transition: .5s;
+        z-index: 2;
+      }
+
+      svg{
+        transition: all ease-in-out .3s;
+        position: relative;
+        z-index: 3;
+      }
+      
+      span{
+        z-index: 3;
+        position: relative;
       }
 
     }

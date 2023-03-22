@@ -3,6 +3,8 @@ import styled from 'styled-components'
 import Title from '../../components/title/Title'
 import Sidebar from '../../components/sidebar/Sidebar'
 import { Text } from '../../styles/global'
+/* ------------------------------ REACT-REVEAL ------------------------------ */
+import Fade from 'react-reveal/Fade';
 
 const About = () => {
     return (
@@ -12,61 +14,68 @@ const About = () => {
                 <div className="content">
                     <Sidebar section='about' />
                     <div className="info">
-                        <div className="img"></div>
-                        <div className="text">
-                            <h3>I'm a full stack developer with a passion for coding and a strong desire to learn. I may not have years of experience, but I have a willingness to learn and a drive to succeed. I'm excited to take on new challenges and to continue growing as a developer.</h3>
-                            <div>
-                                <p>Summary of soft skills</p>
-                                <ul>
-                                    <li>
-                                        <h3>Problem-solving</h3>
-                                    </li>
-                                    <li>
-                                        <h3>Teamwork</h3>
-                                    </li>
-                                    <li>
-                                        <h3>Communication</h3>
-                                    </li>
-                                    <li>
-                                        <h3>Time management</h3>
-                                    </li>
-                                    <li>
-                                        <h3>Adaptability</h3>
-                                    </li>
-                                </ul>
+                        <Fade left distance='10%'>
+                            <div className="img"></div>
+                        </Fade>
+                        <Fade right distance='10%'>
+                            <div className="text">
+                                <h3>I'm a full stack developer with a passion for coding and a strong desire to learn. I may not have years of experience, but I have a willingness to learn and a drive to succeed. I'm excited to take on new challenges and to continue growing as a developer.</h3>
+                                <div>
+                                    <p>Summary of soft skills</p>
+                                    <ul>
+                                        <li>
+                                            <h3>Problem-solving</h3>
+                                        </li>
+                                        <li>
+                                            <h3>Teamwork</h3>
+                                        </li>
+                                        <li>
+                                            <h3>Communication</h3>
+                                        </li>
+                                        <li>
+                                            <h3>Time management</h3>
+                                        </li>
+                                        <li>
+                                            <h3>Adaptability</h3>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <h3>I am always eager to learn new technologies and trends, and I am committed to using my skills and experience to help businesses achieve their goals through effective website development. </h3>
+                                <h3>In my free time, I like to go to the gym to stay in shape, read science fiction books, and watch movies at the cinema. These hobbies help me maintain a creative and fresh mindset for my projects.</h3>
                             </div>
-                            <h3>I am always eager to learn new technologies and trends, and I am committed to using my skills and experience to help businesses achieve their goals through effective website development. </h3>
-                            <h3>In my free time, I like to go to the gym to stay in shape, read science fiction books, and watch movies at the cinema. These hobbies help me maintain a creative and fresh mindset for my projects.</h3>
+                        </Fade>
+                    </div>
+                    <Fade bottom distance='10%'>
+
+                        <div className="skills">
+                            <ul>
+                                <li>
+                                    <h4>HTML</h4>
+                                </li>
+                                <li>
+                                    <h4>JavaScript</h4>
+                                </li>
+                                <li>
+                                    <h4>CSS</h4>
+                                </li>
+                                <li>
+                                    <h4>SASS</h4>
+                                </li>
+                                <li>
+                                    <h4>ReactJs</h4>
+                                </li>
+                                <li>
+                                    <h4>NodeJs</h4>
+                                </li>
+                                <li>
+                                    <h4>MongoDB</h4>
+                                </li>
+                                <li>
+                                    <h4>MySQL</h4>
+                                </li>
+                            </ul>
                         </div>
-                    </div>
-                    <div className="skills">
-                        <ul>
-                            <li>
-                                <h4>HTML</h4>
-                            </li>
-                            <li>
-                                <h4>JavaScript</h4>
-                            </li>
-                            <li>
-                                <h4>CSS</h4>
-                            </li>
-                            <li>
-                                <h4>SASS</h4>
-                            </li>
-                            <li>
-                                <h4>ReactJs</h4>
-                            </li>
-                            <li>
-                                <h4>NodeJs</h4>
-                            </li>
-                            <li>
-                                <h4>MongoDB</h4>
-                            </li>
-                            <li>
-                                <h4>MySQL</h4>
-                            </li>
-                        </ul>
-                    </div>
+                    </Fade>
                 </div>
             </div>
         </Container>

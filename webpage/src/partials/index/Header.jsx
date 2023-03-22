@@ -1,32 +1,40 @@
 import React from 'react'
+/* ---------------------------- STYLED-COMPONENTS --------------------------- */
 import styled from 'styled-components'
-import Sidebar from '../../components/sidebar/Sidebar'
 import { Text } from '../../styles/global'
+/* ------------------------------- FONTAWESOME ------------------------------ */
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faAngleDoubleRight } from '@fortawesome/free-solid-svg-icons'
+/* ------------------------------- COMPONENTS ------------------------------- */
 import ItemEffectWordChange from '../../components/effects/ItemEffectWordChange'
+import Sidebar from '../../components/sidebar/Sidebar'
+/* ------------------------------ REACT-REVEAL ------------------------------ */
+import Fade from 'react-reveal/Fade';
+
 
 const Header = () => {
     return (
         <Container className='container' id='home'>
             <div className="container-lg">
-                <Sidebar section='home'/>
-                <div className='image'>
-
-                </div>
-                <div className="text">
-                    <ItemEffectWordChange/>
-                    <h1>I'M MANUEL DIEZ DE OÑATE</h1>
-                    <h2>FULL STACK DEVELOPER</h2>
-                    <p className='description'>Crafting digital solutions with passion, precision, and a desire to make a difference in the world</p>
-                    <ButtonCinco className='boton'>
-                        <div className="icono">
-                            <FontAwesomeIcon icon={faAngleDoubleRight}/>
-                        </div>
-                        <span className='buttonText'>MORE ABOUT ME</span>
-                        <span className='buttonText buttonText--hidden'>GO</span>
-                    </ButtonCinco>
-                </div>
+                <Sidebar  section='home' />
+                <Fade left distance='10%'>
+                    <div className='image'></div>
+                </Fade>
+                <Fade top distance='10%'>
+                    <div className="text">
+                        <ItemEffectWordChange />
+                        <h1>I'M MANUEL DIEZ DE OÑATE</h1>
+                        <h2>FULL STACK DEVELOPER</h2>
+                        <p className='description'>Crafting digital solutions with passion, precision, and a desire to make a difference in the world</p>
+                        <ButtonCinco className='boton'>
+                            <div className="icono">
+                                <FontAwesomeIcon icon={faAngleDoubleRight} />
+                            </div>
+                            <span className='buttonText'>MORE ABOUT ME</span>
+                            <span className='buttonText buttonText--hidden'>GO</span>
+                        </ButtonCinco>
+                    </div>
+                </Fade>
             </div>
         </Container>
     )

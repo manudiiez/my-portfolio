@@ -2,26 +2,32 @@ import React from 'react'
 import styled from 'styled-components'
 import { Text } from '../../styles/global'
 
+/* ------------------------------ REACT-REVEAL ------------------------------ */
+import Fade from 'react-reveal/Fade';
+
 const FormContainer = () => {
     return (
         <Container>
-            <p>Feel free to contact me any time.  I will get back to you as soon as I can</p>
-
-            <div className="form">
-                <div>
-                    <input type="text" name='name' placeholder=' ' />
-                    <label htmlFor="name">Name</label>
+            <Fade top distance='10%'>
+                <p>Feel free to contact me any time.  I will get back to you as soon as I can</p>
+            </Fade>
+            <Fade left distance='10%'>
+                <div className="form">
+                    <div>
+                        <input type="text" name='name' placeholder=' ' />
+                        <label htmlFor="name">Name</label>
+                    </div>
+                    <div>
+                        <input type="email" name='email' placeholder=' ' />
+                        <label htmlFor="email">Email</label>
+                    </div>
+                    <div>
+                        <textarea name="message" placeholder=' '></textarea>
+                        <label htmlFor="message">Message</label>
+                    </div>
+                    <button type='submit'>SEND</button>
                 </div>
-                <div>
-                    <input type="email" name='email' placeholder=' ' />
-                    <label htmlFor="email">Email</label>
-                </div>
-                <div>
-                    <textarea name="message" placeholder=' '></textarea>
-                    <label htmlFor="message">Message</label>
-                </div>
-                <button type='submit'>SEND</button>
-            </div>
+            </Fade>
         </Container>
     )
 }

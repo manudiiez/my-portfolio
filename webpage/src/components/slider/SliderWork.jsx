@@ -1,6 +1,9 @@
 import React, { useState } from 'react'
 import styled from 'styled-components'
 import { Text } from '../../styles/global';
+/* ------------------------------ REACT-REVEAL ------------------------------ */
+import Fade from 'react-reveal/Fade';
+
 
 const SliderWork = ({ project }) => {
 
@@ -8,24 +11,26 @@ const SliderWork = ({ project }) => {
 
     return (
         <Container >
-            <img className='desktop' onClick={() => { setState(!state) }} src={project.img} alt="" />
-            <img className='mobile' onClick={() => { setState(!state) }} src={project.img2} alt="" />
-            <div className={`text ${state ? 'active' : ''}`}>
-                <div className='title'>
-                    <h3>{project.title}</h3>
-                    <p>{project.category}</p>
+            <Fade>
+                <img className='desktop' onClick={() => { setState(!state) }} src={project.img} alt="" />
+                <img className='mobile' onClick={() => { setState(!state) }} src={project.img2} alt="" />
+                <div className={`text ${state ? 'active' : ''}`}>
+                    <div className='title'>
+                        <h3>{project.title}</h3>
+                        <p>{project.category}</p>
+                    </div>
+                    <div>
+                        <ul>
+                            {
+                                project.technologies.map((tech, index) => (
+                                    <li key={`c-${index}`}>{tech}</li>
+                                ))
+                            }
+                        </ul>
+                        <ButtonA href={`/${project.id}`}><span>More about this</span></ButtonA>
+                    </div>
                 </div>
-                <div>
-                    <ul>
-                        {
-                            project.technologies.map((tech, index) => (
-                                <li key={`c-${index}`}>{tech}</li>
-                            ))
-                        }
-                    </ul>
-                    <ButtonA href={`/${project.id}`}><span>More about this</span></ButtonA>
-                </div>
-            </div>
+            </Fade>
         </Container>
     )
 }

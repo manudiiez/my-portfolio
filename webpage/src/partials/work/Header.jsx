@@ -3,7 +3,8 @@ import styled from 'styled-components'
 import Sidebar from '../../components/sidebar/Sidebar'
 import Title from '../../components/title/Title'
 import { Text } from '../../styles/global'
-
+/* ------------------------------ REACT-REVEAL ------------------------------ */
+import Fade from 'react-reveal/Fade';
 
 const Header = ({ data }) => {
 
@@ -12,10 +13,12 @@ const Header = ({ data }) => {
         <Container className='container'>
             <Title titulo={data.title} backTitulo={data.backtitle} />
             <div className="container-lg">
-                <h1>{data.description}</h1>
-                <Sidebar/>
+                <Sidebar />
+                <Fade top>
+                    <h1>{data.description}</h1>
+                </Fade>
 
-                <div>
+                <div className='img'>
                     <img className='desktop' src={data.desktop} alt="" />
                     <img className='mobile' src={data.mobile} alt="" />
                 </div>
@@ -43,7 +46,7 @@ const Container = styled.section`
             }
         }
 
-        div{
+        .img{
             width: 100%;
             height: 100%;
             max-height: 700px;

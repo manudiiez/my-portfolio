@@ -6,7 +6,6 @@ import { faChevronLeft, faChevronRight } from '@fortawesome/free-solid-svg-icons
 import { Text } from '../../styles/global'
 
 
-
 const Slider = ({ items, children }) => {
 
     const slideShows = useRef(null)

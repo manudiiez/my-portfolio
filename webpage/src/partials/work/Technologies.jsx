@@ -1,13 +1,16 @@
 import React from 'react'
 import styled from 'styled-components';
 import { Text } from '../../styles/global';
+/* ------------------------------ REACT-REVEAL ------------------------------ */
+import Fade from 'react-reveal/Fade';
 
 const Technologies = ({ data }) => {
     return (
         <Container>
             <div className='container-lg'>
-
-                <h2>TECHNOLOGIES</h2>
+                <Fade top>
+                    <h2>TECHNOLOGIES</h2>
+                </Fade>
                 <ul>
                     {
                         data.map((item, index) => (

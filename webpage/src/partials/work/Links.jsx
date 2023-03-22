@@ -3,6 +3,8 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import React from 'react'
 import styled from 'styled-components'
 import { Text } from '../../styles/global'
+/* ------------------------------ REACT-REVEAL ------------------------------ */
+import Fade from 'react-reveal/Fade';
 
 const Links = ({links}) => {
     return (
@@ -11,13 +13,13 @@ const Links = ({links}) => {
                 <h3>LINKS TO THE PROJECT</h3>
                 <div>
                     {
-                        links.github && (<a href={links.github} target="_blank"><FontAwesomeIcon icon={faGithub} /></a>)
+                        links.github && (<Fade top><a href={links.github} target="_blank"><FontAwesomeIcon icon={faGithub} /></a></Fade>)
                     }
                     {
-                        links.figma && (<a href={links.figma} target="_blank"><FontAwesomeIcon icon={faFigma} /></a>)
+                        links.figma && (<Fade top><a href={links.figma} target="_blank"><FontAwesomeIcon icon={faFigma} /></a></Fade>)
                     }
                     {
-                        links.demo && (<a href={links.demo} target="_blank">DEMO</a>)
+                        links.demo && (<Fade top><a href={links.demo} target="_blank">DEMO</a></Fade>)
                     }
                 </div>
             </div>

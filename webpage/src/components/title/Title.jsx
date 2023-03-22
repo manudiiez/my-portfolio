@@ -1,14 +1,19 @@
 import React from 'react'
 import styled from 'styled-components'
 import { Text } from '../../styles/global'
+/* ------------------------------ REACT-REVEAL ------------------------------ */
+import Fade from 'react-reveal/Fade';
 
-const Title = ({titulo, backTitulo, letter}) => {
-  return (
-    <Container>
-        <p className='title'>{titulo}</p>
-        <p className='back'>{backTitulo}</p>
-    </Container>
-  )
+const Title = ({ titulo, backTitulo, letter }) => {
+    return (
+        <Fade top>
+            <Container>
+
+                <p className='title'>{titulo}</p>
+                <p className='back'>{backTitulo}</p>
+            </Container>
+        </Fade>
+    )
 }
 
 export default Title

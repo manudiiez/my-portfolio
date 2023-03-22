@@ -12,6 +12,7 @@ import rucaTextil2 from '../../img/work-ruca-textil2.png'
 import incienso1 from '../../img/work-incienso.png'
 import incienso2 from '../../img/work-incienso2.png'
 
+
 const items = [
   [
     {

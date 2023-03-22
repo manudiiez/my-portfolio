@@ -22,7 +22,6 @@ function App() {
   return (
     <div>
       <GlobalStyles />
-      <header>Header</header>
       <main>
         <Wrapper>
           <Routes>

@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
+/* -------------------------------- SECTIONS -------------------------------- */
 import Footer from '../components/footer/Footer'
 import About from '../partials/index/About'
 import Contact from '../partials/index/Contact'

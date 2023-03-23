@@ -3,34 +3,35 @@ import { Routes, Route, useLocation } from 'react-router-dom';
 import { GlobalStyles } from './styles/global';
 import Index from './views/Index';
 import Work from './views/Work';
-import { useLayoutEffect } from 'react';
-import ItemSocialLinks from './components/effects/ItemSocialLinks';
+import { useContext, useLayoutEffect } from 'react';
+import Navbar from './components/navbar/Navbar';
+import { ThemeContextProvider } from './context/themeModeContext';
 
 const Wrapper = ({ children }) => {
   const location = useLocation();
   useLayoutEffect(() => {
-    if(location.hash === '#projects'){
-      document.documentElement.scrollTo(0, 700);
-    }else{
-      document.documentElement.scrollTo(0, 0);
-    }
+    document.documentElement.scrollTo(0, 1000);
   }, [location.pathname]);
   return children;
 };
 
 function App() {
+
   return (
     <div>
-      <GlobalStyles />
-      <main>
-        <Wrapper>
-          <Routes>
-            <Route path='/' element={<Index />} />
-            <Route path='/:id' element={<Work />} />
-            <Route path='/prueba' element={<ItemSocialLinks />} />
-          </Routes>
-        </Wrapper>
-      </main>
+      <ThemeContextProvider>
+        <GlobalStyles />
+        {/* <Navbar/> */}
+        <main>
+          <Wrapper>
+            <Routes>
+              <Route path='/' element={<Index />} />
+              <Route path='/:id' element={<Work />} />
+              <Route path='/prueba' element={<Navbar />} />
+            </Routes>
+          </Wrapper>
+        </main>
+      </ThemeContextProvider>
     </div>
   );
 }

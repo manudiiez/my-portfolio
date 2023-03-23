@@ -148,7 +148,8 @@ const Container = styled.div`
                         flex-wrap: wrap;
                         li{
                             h3{
-                                ${Text({ size: '1rem', color: props => props.theme.yellow, weight: '700' })};
+                                transition: color .15s linear;
+                                ${Text({ size: '1rem', color: props => props.theme.primary, weight: '700' })};
                             }
                         }
 
@@ -165,7 +166,8 @@ const Container = styled.div`
                 gap: 1rem;
                 li{
                     padding: 1rem 0;
-                    border-bottom: 2px solid ${props => props.theme.yellow};
+                    border-bottom: 2px solid ${props => props.theme.primary};
+                    transition: border .15s linear;
                     h4{
                         ${Text({ size: '1rem', color: props => props.theme.white, weight: '300' })};
                     }

@@ -115,7 +115,7 @@ const Pagination = styled.div`
         }
         
         &:hover{
-            background-color: ${props => props.theme.yellow};
+            background-color: ${props => props.theme.primary};
         }
     }
     div{

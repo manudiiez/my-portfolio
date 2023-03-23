@@ -58,7 +58,7 @@ const Container = styled.section`
                 border: 0;
                 letter-spacing: 0.5rem;
                 &:hover{
-                    color: ${props => props.theme.yellow};
+                    color: ${props => props.theme.primary};
                 }
             }
         }

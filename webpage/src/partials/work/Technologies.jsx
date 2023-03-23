@@ -44,7 +44,7 @@ const Container = styled.section`
         gap: 1rem;
         
         li{
-            ${Text({ size: '1.5rem', color: props => props.theme.yellow, weight: '400' })};
+            ${Text({ size: '1.5rem', color: props => props.theme.primary, weight: '400' })};
         }
     }
 

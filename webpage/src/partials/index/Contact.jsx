@@ -82,10 +82,11 @@ const Container = styled.section`
                     position: absolute;
                     top: -20px;
                     left: -20px;
-
+                    transition: background-color .15s linear;
+                    
                     width: 40px;
                     height: 40px;
-                    background-color: ${props => props.theme.yellow};
+                    background-color: ${props => props.theme.primary};
                 }
 
                 &:after{
@@ -94,10 +95,11 @@ const Container = styled.section`
                     top: -5%;
                     right: 3rem;
                     z-index: -1;
-
+                    
+                    transition: background-color .15s linear;
                     width: 20%;
                     height: 110%;
-                    background-color: ${props => props.theme.yellow};
+                    background-color: ${props => props.theme.primary};
                 }
 
 
@@ -130,7 +132,7 @@ const Container = styled.section`
                             &:hover{
                                 background-color: ${props => props.theme.dark};
                                 svg{
-                                    color: ${props => props.theme.yellow};
+                                    color: ${props => props.theme.primary};
                                 }
                             }
                         }
@@ -143,7 +145,7 @@ const Container = styled.section`
                             padding: 1rem;
                             cursor: pointer;
                             &:hover{
-                                color: ${props => props.theme.yellow};
+                                color: ${props => props.theme.primary};
                             }
                         }
                     }

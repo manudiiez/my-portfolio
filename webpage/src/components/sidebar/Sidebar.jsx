@@ -1,14 +1,18 @@
-import React from 'react'
-import styled from 'styled-components'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faHouse, faFolder, faUser, faWrench, faComment } from '@fortawesome/free-solid-svg-icons'
 import { useLocation, Link } from 'react-router-dom'
 import Fade from 'react-reveal/Fade';
+import styled from 'styled-components';
+import { themeContext } from '../../context/themeModeContext.js';
+import { useContext } from 'react';
 
 
 const Sidebar = ({ section }) => {
 
   let location = useLocation();
+  const { themeToggler } = useContext(themeContext);
+
+
 
   return (
     <Container>
@@ -19,38 +23,36 @@ const Sidebar = ({ section }) => {
             {
               location.pathname === '/' ? (
 
-                <a href="#home" className={section === 'home' ? 'active' : ''}><FontAwesomeIcon icon={faHouse} /></a>
+                <a href="#home" className={section === 'home' ? 'active' : ''} onClick={() => { themeToggler(1) }}><FontAwesomeIcon icon={faHouse} /></a>
               ) : (
-                <Link to='/'><FontAwesomeIcon icon={faHouse} /></Link>
+                <Link to='/' onClick={() => { themeToggler(1) }}><FontAwesomeIcon icon={faHouse} /></Link>
               )
             }
           </li>
-          <li>
-            {
-              location.pathname === '/' ? (
+          {
+            location.pathname === '/' && (
 
-                <a href="#projects" className={section === 'projects' ? 'active' : ''}><FontAwesomeIcon icon={faFolder} /></a>
-              ) : (
-                <Link to='/#projects'><FontAwesomeIcon icon={faFolder} /></Link>
-              )
-            }
-          </li>
-          {
-            location.pathname === '/' && (
               <li>
-                <a href="#about" className={section === 'about' ? 'active' : ''}><FontAwesomeIcon icon={faUser} /></a>
+                <a href="#projects" className={section === 'projects' ? 'active' : ''} onClick={() => { themeToggler(2) }}><FontAwesomeIcon icon={faFolder} /></a>
               </li>
             )
           }
           {
             location.pathname === '/' && (
               <li>
-                <a href="#services" className={section === 'services' ? 'active' : ''}><FontAwesomeIcon icon={faWrench} /></a>
+                <a href="#about" className={section === 'about' ? 'active' : ''} onClick={() => { themeToggler(3) }}><FontAwesomeIcon icon={faUser} /></a>
+              </li>
+            )
+          }
+          {
+            location.pathname === '/' && (
+              <li>
+                <a href="#services" className={section === 'services' ? 'active' : ''} onClick={() => { themeToggler(4) }}><FontAwesomeIcon icon={faWrench} /></a>
               </li>
             )
           }
           <li>
-            <a href="#contact" className={section === 'contact' ? 'active' : ''}><FontAwesomeIcon icon={faComment} /></a>
+            <a href="#contact" className={section === 'contact' ? 'active' : ''} onClick={() => { themeToggler(5) }}><FontAwesomeIcon icon={faComment} /></a>
           </li>
           <li>
             <button><span>CV</span></button>
@@ -75,6 +77,54 @@ const Container = styled.div`
     flex-direction: column;
     gap: .8rem;
     li{
+      &:nth-of-type(1){
+        a{
+          &::before{
+            background-color: ${props => props.theme.colors.yellow};
+          }
+          &.active{
+            background-color: ${props => props.theme.yellow};
+          }
+        }
+      }
+      &:nth-of-type(2){
+        a{
+          &::before{
+            background-color: ${props => props.theme.colors.blue};
+          }
+          &.active{
+            background-color: ${props => props.theme.blue};
+          }
+        }
+      }
+      &:nth-of-type(3){
+        a{
+          &::before{
+            background-color: ${props => props.theme.colors.pink};
+          }
+        }
+      }
+      &:nth-of-type(4){
+        a{
+          &::before{
+            background-color: ${props => props.theme.colors.green};
+          }
+        }
+      }
+      &:nth-of-type(5){
+        a{
+          &::before{
+            background-color: ${props => props.theme.colors.red};
+          }
+        }
+      }
+      &:nth-of-type(6){
+        button{
+          &::before{
+            background-color: ${props => props.theme.colors.blue};
+          }
+        }
+      }
       a, button{
         background-color: ${props => props.theme.black};
         border-radius: 50%;
@@ -92,7 +142,6 @@ const Container = styled.div`
         
         &:hover{
           svg{
-            color: ${props => props.theme.dark};
             transform: rotateY(360deg);
           }  
           span{
@@ -103,8 +152,9 @@ const Container = styled.div`
           }     
         }
         &.active{
-          background-color: ${props => props.theme.yellow};
+          background-color: ${props => props.theme.primary};
         }
+        
         
         &::before{
           content: "";

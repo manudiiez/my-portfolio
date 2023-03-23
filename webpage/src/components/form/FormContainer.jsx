@@ -76,7 +76,7 @@ const Container = styled.div`
                 }
 
                 &:focus{
-                    border-bottom: 1px solid ${props => props.theme.yellow};
+                    border-bottom: 1px solid ${props => props.theme.primary};
 
                     ~ label{
                         position: absolute;
@@ -84,7 +84,7 @@ const Container = styled.div`
                         left: 0;
                         display: block;
                         transition: 0.2s;
-                        ${Text({ size: '1rem', color: props => props.theme.yellow, weight: '300' })};
+                        ${Text({ size: '1rem', color: props => props.theme.primary, weight: '300' })};
                     }
 
                 }

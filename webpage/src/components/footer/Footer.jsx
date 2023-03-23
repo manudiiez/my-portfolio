@@ -57,7 +57,7 @@ const Container = styled.footer`
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         h6{
-            ${Text({ size: '1.5rem', color: props => props.theme.yellow, weight: '400' })};
+            ${Text({ size: '1.5rem', color: props => props.theme.primary, weight: '400' })};
         }
         ul{
             list-style: none;
@@ -83,7 +83,7 @@ const Container = styled.footer`
             a{
                 ${Text({ size: '1.5rem', color: props => props.theme.white, weight: '400' })};
                 &:hover{
-                    color: ${props => props.theme.yellow};
+                    color: ${props => props.theme.primary};
                 }
             }
         }

@@ -12,8 +12,8 @@ const SliderWork = ({ project }) => {
     return (
         <Container >
             <Fade>
-                <img className='desktop' onClick={() => { setState(!state) }} src={project.img} alt="" />
-                <img className='mobile' onClick={() => { setState(!state) }} src={project.img2} alt="" />
+                <img className='desktop transition' onClick={() => { setState(!state) }} src={project.img} alt="" />
+                <img className='mobile transition' onClick={() => { setState(!state) }} src={project.img2} alt="" />
                 <div className={`text ${state ? 'active' : ''}`}>
                     <div className='title'>
                         <h3>{project.title}</h3>
@@ -40,13 +40,14 @@ export default SliderWork
 const Container = styled.div`
     width: 100%;
     height: 100%;
-    position: relative;
+    position: relative ;
     overflow: hidden;
     img{
         cursor: pointer;
         width: 100%;
         height: 100%;
         object-fit: cover;
+        background-color: ${props => props.theme.primary};
 
         &.mobile{
             display: none;
@@ -54,6 +55,7 @@ const Container = styled.div`
     }
 
     .text{
+        box-sizing: border-box;
         position: absolute;
         bottom: -40%;
         left: 0;
@@ -74,7 +76,7 @@ const Container = styled.div`
                 ${Text({ size: '2rem', color: props => props.theme.white, weight: '400' })};
             }
             p{
-                ${Text({ size: '1.3rem', color: props => props.theme.yellow, weight: '400' })};
+                ${Text({ size: '1.3rem', color: props => props.theme.primary, weight: '400' })};
             }
             
             ul{
@@ -84,7 +86,7 @@ const Container = styled.div`
                 align-items: center;
                 gap: 1rem;
                 li{
-                    ${Text({ size: '.8rem', color: props => props.theme.yellow, weight: '400' })};
+                    ${Text({ size: '.8rem', color: props => props.theme.primary, weight: '400' })};
                 }
             }
             
@@ -149,14 +151,14 @@ const ButtonA = styled.a`
         top: 0;
         left: calc(-100% - 105px);
         border-right: 80px solid transparent;
-        border-bottom: 80px solid ${props => props.theme.yellow};
+        border-bottom: 80px solid ${props => props.theme.primary};
         transition: .4s ease-in-out all;
 
     }
 
     &:hover{
-        border-bottom: 1px solid ${props => props.theme.yellow};
-        border-right: 1px solid ${props => props.theme.yellow};
+        border-bottom: 1px solid ${props => props.theme.primary};
+        border-right: 1px solid ${props => props.theme.primary};
         &::after{
             left: 0;
         }

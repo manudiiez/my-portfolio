@@ -23,10 +23,10 @@ const Header = () => {
                 <Fade top distance='10%'>
                     <div className="text">
                         <ItemEffectWordChange />
-                        <h1>I'M MANUEL DIEZ DE OÑATE</h1>
+                        <h1 className='transition'>I'M MANUEL DIEZ DE OÑATE</h1>
                         <h2>FULL STACK DEVELOPER</h2>
                         <p className='description'>Crafting digital solutions with passion, precision, and a desire to make a difference in the world</p>
-                        <ButtonCinco className='boton'>
+                        <ButtonCinco className='boton transition'>
                             <div className="icono">
                                 <FontAwesomeIcon icon={faAngleDoubleRight} />
                             </div>
@@ -44,6 +44,7 @@ export default Header
 
 const Container = styled.section`
     padding: 5rem 10rem;
+    padding-top: 3rem!important;
     position: relative;
 
     .container-lg{
@@ -62,7 +63,8 @@ const Container = styled.section`
 
         .text{
             h1{
-                ${Text({ size: '3rem', color: props => props.theme.yellow, weight: '700' })};
+                
+                ${Text({ size: '3rem', color: props => props.theme.primary, weight: '700' })};
             }
             h2{
                 margin-top: 1rem;
@@ -85,7 +87,7 @@ const Container = styled.section`
         .container-lg{
             .text{
                 h1{
-                    ${Text({ size: '2.5rem', color: props => props.theme.yellow, weight: '700' })};
+                    ${Text({ size: '2.5rem', color: props => props.theme.primary, weight: '700' })};
                 }
                 h2{
                     ${Text({ size: '2.5rem', color: props => props.theme.white, weight: '700' })}
@@ -123,10 +125,12 @@ const Container = styled.section`
 
     @media (max-width: 550px) {
         padding: 2rem;
+        padding-top: 0;
+
         .container-lg{
             .text{
                 h1{
-                    ${Text({ size: '2rem', color: props => props.theme.yellow, weight: '700' })};
+                    ${Text({ size: '2rem', color: props => props.theme.primary, weight: '700' })};
                 }
                 h2{
                     ${Text({ size: '2rem', color: props => props.theme.white, weight: '700' })}
@@ -153,7 +157,7 @@ const ButtonCinco = styled.button`
     height: 40px;
     width: 100%;
     max-width: 240px;
-    background-color: ${props => props.theme.yellow};
+    background-color: ${props => props.theme.primary};
     color: #fff;
     ${Text({ size: '1rem', color: props => props.theme.dark, weight: '700' })};
     align-items: center;
@@ -188,7 +192,7 @@ const ButtonCinco = styled.button`
         opacity: 0;
         svg{
             font-size: 1.5rem;
-            color: ${props => props.theme.yellow};
+            color: ${props => props.theme.primary};
         }
     }
     

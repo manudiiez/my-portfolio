@@ -5,7 +5,7 @@ const ItemEffectWordChange = () => {
     return (
         <Container>
             <div className="content">
-                <div className="content__container">
+                <div className="content__container transition" >
                     <p className="content__container__text">
                         Hello
                     </p>
@@ -62,7 +62,7 @@ const Container = styled.div`
                 position: absolute;
                 top: 0;
             
-                color: ${props => props.theme.yellow};
+                color: ${props => props.theme.primary};
                 font-size: 2rem;
 
                 line-height: 40px;

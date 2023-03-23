@@ -59,9 +59,10 @@ const Container = styled.section`
             background-color: ${props => props.theme.black};
             padding: 2rem;
             h4{
-                ${Text({ size: '1.5rem', color: props => props.theme.yellow, weight: '400' })};
+                ${Text({ size: '1.5rem', color: props => props.theme.primary, weight: '400' })};
                 margin-bottom: 2rem;
                 line-height: 164.02%;
+                transition: color .15s linear;
             }
             h5{
                 ${Text({ size: '1rem', color: props => props.theme.white, weight: '300' })};
@@ -88,7 +89,7 @@ const Container = styled.section`
         .listServices{
             .item{
                 h4{
-                    ${Text({ size: '1rem', color: props => props.theme.yellow, weight: '400' })};
+                    ${Text({ size: '1rem', color: props => props.theme.primary, weight: '400' })};
                     margin-bottom: 2rem;
                 }
                 h5{

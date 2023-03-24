@@ -12,7 +12,9 @@ export const themeYellow = {
         pink: '#FF99C9',
         green: '#6EEB83',
         red: '#EC4E20',
-    }
+    },
+    primaryShadow: '#fab70044',
+    secondaryShadow: '#292b2944'
 }
 export const themeBlue = {
     white: "#FDFDFD",
@@ -26,7 +28,9 @@ export const themeBlue = {
         pink: '#FF99C9',
         green: '#6EEB83',
         red: '#EC4E20',
-    }
+    },
+    primaryShadow: '#46b1c944',
+    secondaryShadow: '#292b2944'
 }
 export const themePink = {
     white: "#FDFDFD",
@@ -40,7 +44,9 @@ export const themePink = {
         pink: '#FF99C9',
         green: '#6EEB83',
         red: '#EC4E20',
-    }
+    },
+    primaryShadow: '#ff99c944',
+    secondaryShadow: '#292b2944'
 }
 export const themeGreen = {
     white: "#FDFDFD",
@@ -54,7 +60,9 @@ export const themeGreen = {
         pink: '#FF99C9',
         green: '#6EEB83',
         red: '#EC4E20',
-    }
+    },
+    primaryShadow: '#6eeb8344',
+    secondaryShadow: '#292b2944'
 }
 export const themeRed = {
     white: "#FDFDFD",
@@ -68,7 +76,9 @@ export const themeRed = {
         pink: '#FF99C9',
         green: '#6EEB83',
         red: '#EC4E20',
-    }
+    },
+    primaryShadow: '#ec502044',
+    secondaryShadow: '#292b2944'
 }
 
 

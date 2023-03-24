@@ -49,6 +49,8 @@ export default Footer
 const Container = styled.footer`
     background-color: ${props => props.theme.black};
     padding: 5rem 10rem;
+    position: relative;
+
 
     @media (max-width: 550px) {
         padding: 5rem 2rem;

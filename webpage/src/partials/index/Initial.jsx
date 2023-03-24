@@ -43,7 +43,7 @@ const Container = styled.div`
     box-sizing: border-box;
     height: 100vh;
     width: 100%;
-    background-color: ${props => props.theme.dark};
+    /* background-color: ${props => props.theme.dark}; */
   
     header{
         box-sizing: border-box;
@@ -52,7 +52,7 @@ const Container = styled.div`
         left: 0;
         width: 100%;
         height: 100vh;
-        background-color: ${props => props.theme.dark};
+        /* background-color: ${props => props.theme.dark}; */
         display: flex;
         justify-content: flex-end;
         align-items: center;

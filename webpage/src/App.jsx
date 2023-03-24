@@ -6,6 +6,7 @@ import Work from './views/Work';
 import { useContext, useLayoutEffect } from 'react';
 import Navbar from './components/navbar/Navbar';
 import { ThemeContextProvider } from './context/themeModeContext';
+import ItemBackground from './components/effects/ItemBackground';
 
 const Wrapper = ({ children }) => {
   const location = useLocation();
@@ -22,6 +23,7 @@ function App() {
       <ThemeContextProvider>
         <GlobalStyles />
         {/* <Navbar/> */}
+        <ItemBackground/>
         <main>
           <Wrapper>
             <Routes>

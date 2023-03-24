@@ -24,6 +24,7 @@ function App() {
         <GlobalStyles />
         {/* <Navbar/> */}
         <ItemBackground/>
+        <Navbar/>
         <main>
           <Wrapper>
             <Routes>

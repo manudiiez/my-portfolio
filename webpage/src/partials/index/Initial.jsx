@@ -51,7 +51,7 @@ const Container = styled.div`
         top: 0;
         left: 0;
         width: 100%;
-        height: 80vh;
+        height: 100vh;
         background-color: ${props => props.theme.dark};
         display: flex;
         justify-content: flex-end;

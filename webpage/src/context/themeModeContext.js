@@ -56,32 +56,3 @@ const ThemeContextProvider = ({children}) => {
 }
 
 export {themeContext, ThemeContextProvider}
-
-// const DarkModeReducer = (state, action) => {
-//     switch (action) {
-//         case 1: {
-//             const result = theme
-//             console.log(result);
-//             result.primary = result.colors.yellow
-//             return result
-//         }
-//         default:
-//             return theme;
-//     }
-// };
-
-// export const ThemeModeContext = createContext(INITIAL_STATE);
-
-// export const ThemeModeContextProvider = ({ children }) => {
-//     const [state2, dispatch] = useReducer(DarkModeReducer, theme);
-//     console.log(state2);
-//     dispatch(1)
-
-//     const [state, setState] = useState(1);
-
-//     return (
-//         <ThemeModeContext.Provider value={{ theme: theme, dispatch }}>
-//             {children}
-//         </ThemeModeContext.Provider>
-//     );
-// };

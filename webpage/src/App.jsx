@@ -11,7 +11,7 @@ import ItemBackground from './components/effects/ItemBackground';
 const Wrapper = ({ children }) => {
   const location = useLocation();
   useLayoutEffect(() => {
-    document.documentElement.scrollTo(0, 1000);
+    document.documentElement.scrollTo(0, 0);
   }, [location.pathname]);
   return children;
 };

@@ -113,7 +113,7 @@ const Container = styled.div`
                 width: 57%;
                 
                 background: ${props => props.theme.black};
-                background: linear-gradient(90deg, rgba(41,43,41,1) 0%, rgba(17,17,17,1) 100%); 
+                background: linear-gradient(90deg, ${props => props.theme.black} 0%, ${props => props.theme.dark} 100%); 
                 z-index: 1;
             }
             .text{

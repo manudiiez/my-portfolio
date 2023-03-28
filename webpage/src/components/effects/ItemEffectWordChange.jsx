@@ -35,7 +35,7 @@ const Container = styled.div`
         width: fit-content;
         font-size: 1.5rem;
         line-height: 40px;
-        color: #ecf0f1;
+        color: ${props => props.theme.white};
         margin-bottom: 2rem;
         padding: 0 1rem;
 

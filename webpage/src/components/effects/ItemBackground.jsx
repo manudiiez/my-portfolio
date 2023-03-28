@@ -64,7 +64,6 @@ const ItemBackground = () => {
             <span style={{ "--i": 17 }}></span>
             <span style={{ "--i": 13 }}></span>
             <span style={{ "--i": 28 }}></span>
-
         </Container>
     )
 }
@@ -84,6 +83,7 @@ const Container = styled.div`
         position: relative;
         width: 10px;
         height: 10px;
+        transition: background-color .6s ease-out, box-shadow .6s ease-out;
         background-color: ${props => props.theme.primary};
         margin: 0 4px;
         border-radius: 50%;

@@ -16,6 +16,22 @@ export const themeYellow = {
     primaryShadow: '#fab70044',
     secondaryShadow: '#292b2944'
 }
+// export const themeYellow = {
+//     white: "#111111",
+//     gray: "#292B29",
+//     primary: "#FAB700",
+//     black: "#F0F2F4",
+//     dark: "#FDFDFD",
+//     colors: {
+//         yellow: "#FAB700",
+//         blue: '#46B1C9',
+//         pink: '#FF99C9',
+//         green: '#6EEB83',
+//         red: '#EC4E20',
+//     },
+//     primaryShadow: '#fab70044',
+//     secondaryShadow: '#292b2944'
+// }
 export const themeBlue = {
     white: "#FDFDFD",
     gray: "#F0F2F4",

@@ -4,7 +4,7 @@ import styled from 'styled-components'
 const ItemBackground = () => {
     return (
         <Container>
-            <span style={{ "--i": 11 }}></span>
+            {/* <span style={{ "--i": 11 }}></span>
             <span style={{ "--i": 12 }}></span>
             <span style={{ "--i": 24 }}></span>
             <span style={{ "--i": 10 }}></span>
@@ -63,7 +63,7 @@ const ItemBackground = () => {
             <span style={{ "--i": 26 }}></span>
             <span style={{ "--i": 17 }}></span>
             <span style={{ "--i": 13 }}></span>
-            <span style={{ "--i": 28 }}></span>
+            <span style={{ "--i": 28 }}></span> */}
         </Container>
     )
 }

@@ -115,7 +115,7 @@ const Container = styled.div`
                 li{
                     list-style: none;
                     a{
-                        color: #fff;
+                        color: ${props => props.theme.white};
                         display: inline-block;
                         padding: 10px 15px;
                         font-size: 1.2em;

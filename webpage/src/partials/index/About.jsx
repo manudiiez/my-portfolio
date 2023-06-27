@@ -128,14 +128,14 @@ const Container = styled.div`
                 gap: 2rem;
 
                 h3{
-                    ${Text({ size: '1rem', color: props => props.theme.white, weight: '300' })};
+                    ${Text({ size: '1rem', color: props => props.theme.white, weight: '400' })};
                 }
                 
                 div{
                     padding: 2rem 0;
                     width: 100%;
                     p{
-                        ${Text({ size: '1rem', color: props => props.theme.white, weight: '300' })};
+                        ${Text({ size: '1rem', color: props => props.theme.white, weight: '400' })};
                     }
                     ul{
                         margin-top: 2rem;

@@ -1,27 +1,11 @@
 import { createGlobalStyle, css } from "styled-components"
 
-export const themeYellow = {
-    white: "#FDFDFD",
-    gray: "#F0F2F4",
-    primary: "#FAB700",
-    black: "#292B29",
-    dark: "#111111",
-    colors: {
-        yellow: "#FAB700",
-        blue: '#46B1C9',
-        pink: '#FF99C9',
-        green: '#6EEB83',
-        red: '#EC4E20',
-    },
-    primaryShadow: '#fab70044',
-    secondaryShadow: '#292b2944'
-}
 // export const themeYellow = {
-//     white: "#111111",
-//     gray: "#292B29",
+//     white: "#FDFDFD",
+//     gray: "#F0F2F4",
 //     primary: "#FAB700",
-//     black: "#F0F2F4",
-//     dark: "#FDFDFD",
+//     black: "#292B29",
+//     dark: "#111111",
 //     colors: {
 //         yellow: "#FAB700",
 //         blue: '#46B1C9',
@@ -32,12 +16,28 @@ export const themeYellow = {
 //     primaryShadow: '#fab70044',
 //     secondaryShadow: '#292b2944'
 // }
+export const themeYellow = {
+    white: "#111111",
+    gray: "#292B29",
+    primary: "#FAB700",
+    black: "#F0F2F4",
+    dark: "#FDFDFD",
+    colors: {
+        yellow: "#FAB700",
+        blue: '#46B1C9',
+        pink: '#FF99C9',
+        green: '#6EEB83',
+        red: '#EC4E20',
+    },
+    primaryShadow: '#fab70044',
+    secondaryShadow: '#292b2944'
+}
 export const themeBlue = {
-    white: "#FDFDFD",
-    gray: "#F0F2F4",
+    white: "#111111",
+    gray: "#292B29",
     primary: "#46B1C9",
-    black: "#292B29",
-    dark: "#111111",
+    black: "#F0F2F4",
+    dark: "#FDFDFD",
     colors: {
         yellow: "#FAB700",
         blue: '#46B1C9',
@@ -49,11 +49,11 @@ export const themeBlue = {
     secondaryShadow: '#292b2944'
 }
 export const themePink = {
-    white: "#FDFDFD",
-    gray: "#F0F2F4",
+    white: "#111111",
+    gray: "#292B29",
     primary: "#FF99C9",
-    black: "#292B29",
-    dark: "#111111",
+    black: "#F0F2F4",
+    dark: "#FDFDFD",
     colors: {
         yellow: "#FAB700",
         blue: '#46B1C9',
@@ -65,11 +65,11 @@ export const themePink = {
     secondaryShadow: '#292b2944'
 }
 export const themeGreen = {
-    white: "#FDFDFD",
-    gray: "#F0F2F4",
+    white: "#111111",
+    gray: "#292B29",
     primary: "#6EEB83",
-    black: "#292B29",
-    dark: "#111111",
+    black: "#F0F2F4",
+    dark: "#FDFDFD",
     colors: {
         yellow: "#FAB700",
         blue: '#46B1C9',
@@ -81,11 +81,11 @@ export const themeGreen = {
     secondaryShadow: '#292b2944'
 }
 export const themeRed = {
-    white: "#FDFDFD",
-    gray: "#F0F2F4",
+    white: "#111111",
+    gray: "#292B29",
     primary: "#EC4E20",
-    black: "#292B29",
-    dark: "#111111",
+    black: "#F0F2F4",
+    dark: "#FDFDFD",
     colors: {
         yellow: "#FAB700",
         blue: '#46B1C9',
@@ -102,7 +102,7 @@ export const themeRed = {
 export const GlobalStyles = createGlobalStyle`
 
     body{
-        background-color: #111111;
+        background-color: #FDFDFD;
     }
     .container{
         padding:10rem;
